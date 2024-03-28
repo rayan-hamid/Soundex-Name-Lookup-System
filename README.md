@@ -1,1 +1,10 @@
 # Soundex-Name-Lookup-System
+The Java application encompasses a robust "Soundex Name Lookup System" designed to efficiently search for names utilizing Soundex encoding, a phonetic algorithm for indexing names by sound, even if they are spelled differently. This system is constructed around a modular architecture, comprising distinct classes to handle key functionalities.
+
+At the heart of this system lies the HashedDictionary class, implementing an associative array data structure using hashing and linear probing to resolve collisions. This class serves as the backbone for efficient storage, retrieval, and management of name-value pairs, where names serve as keys and their corresponding Soundex keys as values. The use of hashing ensures rapid access to stored data, while linear probing optimally handles collisions, ensuring minimal disruption to lookup operations.
+
+The SoundexKeyMaker class complements the HashedDictionary by providing functionality to generate Soundex keys from input names. Leveraging the Soundex algorithm's rules, this class translates names into corresponding Soundex keys, ensuring uniformity and consistency in indexing. Through meticulous adherence to the Soundex algorithm's specifications, accurate Soundex keys are produced, facilitating effective lookup operations within the HashedDictionary.
+
+The main application orchestrates the interaction with users, facilitating name entry and Soundex key retrieval. Upon user input, names are processed through the SoundexKeyMaker to generate Soundex keys, which are then used to query the HashedDictionary for names with similar Soundex keys. The application displays these related names, offering users a comprehensive view of phonetically similar entries within the dataset.
+
+Furthermore, the code demonstrates a commitment to robustness through systematic error handling. It gracefully manages exceptions, ensuring uninterrupted operation even in the face of unexpected inputs or file access issues. Additionally, the code maintains a modular structure, enhancing code organization, readability, and maintainability, facilitating future enhancements or modifications to the system.
